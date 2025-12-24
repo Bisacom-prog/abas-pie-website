@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aba’s Pie | Authentic Ghanaian Meat Pies</title>
+  <meta name="description" content="Aba’s Pie crafts authentic Ghanaian meat pies with quality ingredients, rich flavour, and a modern baking standard. Order online and chat with us on WhatsApp." />
+  <meta name="theme-color" content="#D4A017" />
+
+  <meta property="og:title" content="Aba’s Pie | Authentic Ghanaian Meat Pies" />
+  <meta property="og:description" content="Freshly baked Ghanaian meat pies. Simple ordering, modern experience." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <script>
+    window.ABASPIE_GA4_ID = 'G-ZX48J2C4KP';
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="font-body bg-cream text-brown dark:bg-darkbg dark:text-darktext">
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-brown dark:focus:bg-darkbg">
+    Skip to content
+  </a>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50">
+    <nav class="backdrop-blur bg-white/80 dark:bg-darkbg/80 border-b border-black/5 dark:border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Logo -->
+          <a href="#home" class="flex items-center gap-3" aria-label="Aba’s Pie home">
+            <img src="/assets/img/Aba.webp" alt="Aba’s Pie logo" class="h-10 w-auto rounded-md" />
+            <div class="hidden sm:block">
+              <p class="font-heading font-extrabold tracking-tight leading-none">Aba’s Pie</p>
+              <p class="text-xs text-brown/70 dark:text-darktext/70 leading-none">Freshly Baked Goodness</p>
+            </div>
+          </a>
+
+          <!-- Desktop links -->
+          <div class="hidden md:flex items-center gap-6">
+            <a class="navlink hover:text-orange transition-colors" href="#home">Home</a>
+            <a class="navlink hover:text-orange transition-colors" href="#menu">Menu</a>
+            <a class="navlink hover:text-orange transition-colors" href="#about">About</a>
+            <a class="navlink hover:text-orange transition-colors" href="#video">Video</a>
+            <a class="navlink hover:text-orange transition-colors" href="#contact">Contact</a>
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-2">
+            <!-- Dark mode -->
+            <button id="themeToggle" type="button"
+              class="inline-flex items-center justify-center rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 shadow-sm hover:shadow-soft transition-all duration-300"
+              aria-label="Toggle dark mode"
+              aria-pressed="false">
+              <span id="themeIcon" class="text-lg" aria-hidden="true">🌙</span>
+              <span class="sr-only">Toggle theme</span>
+            </button>
+
+            <!-- Cart -->
+            <button id="cartOpen" type="button"
+              class="relative inline-flex items-center justify-center rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 shadow-sm hover:shadow-soft transition-all duration-300"
+              aria-label="Open cart">
+              <span aria-hidden="true">🛒</span>
+              <span id="cartBadge"
+                class="absolute -top-2 -right-2 min-w-[1.25rem] h-5 px-1 rounded-full bg-coral text-white text-xs font-semibold flex items-center justify-center">
+                0
+              </span>
+            </button>
+
+            <!-- Mobile menu -->
+            <button id="mobileMenuBtn" type="button"
+              class="md:hidden inline-flex items-center justify-center rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 shadow-sm hover:shadow-soft transition-all duration-300"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+              <span aria-hidden="true">☰</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu panel -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-black/5 dark:border-white/10">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-2">
+          <a class="mobilelink rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition" href="#home">Home</a>
+          <a class="mobilelink rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition" href="#menu">Menu</a>
+          <a class="mobilelink rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition" href="#about">About</a>
+          <a class="mobilelink rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition" href="#video">Video</a>
+          <a class="mobilelink rounded-lg px-3 py-2 hover:bg-black/5 dark:hover:bg-white/10 transition" href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section id="home" class="relative">
+      <div class="absolute inset-0">
+        <img
+          src="/assets/img/bakery copy.webp"
+          alt="Fresh baked pastries on a tray"
+          class="h-full w-full object-cover"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/55 to-black/25"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-28">
+        <div class="max-w-2xl">
+          <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur border border-white/15">
+            <span class="h-2 w-2 rounded-full bg-gold"></span>
+            Freshly baked Ghanaian favourites in the UK
+          </p>
+
+          <h1 class="mt-5 font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+            Welcome to Aba’s Pie – Authentic Ghanaian Meat Pies
+          </h1>
+
+          <p class="mt-4 text-lg sm:text-xl text-white/90">
+            Flaky, savory, delicious. Handmade dough, rich spiced filling, baked golden—every single time.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-3">
+            <a href="#menu"
+              class="inline-flex items-center justify-center rounded-2xl bg-gold px-6 py-3 font-semibold text-black shadow-soft
+              hover:bg-orange hover:scale-[1.02] transition-all duration-300"
+              aria-label="Order now, scroll to menu">
+              Order Now
+            </a>
+
+            <a href="#video"
+              class="inline-flex items-center justify-center rounded-2xl bg-white/10 px-6 py-3 font-semibold text-white border border-white/20 backdrop-blur
+              hover:bg-white/15 hover:scale-[1.02] transition-all duration-300"
+              aria-label="Watch our baking process, scroll to video section">
+              Watch how we bake
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4 text-white backdrop-blur">
+              <p class="font-semibold">Freshly Baked</p>
+              <p class="text-sm text-white/85">Small batches, warm service.</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4 text-white backdrop-blur">
+              <p class="font-semibold">Authentic Spice</p>
+              <p class="text-sm text-white/85">Ghana-inspired flavour.</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 border border-white/15 p-4 text-white backdrop-blur">
+              <p class="font-semibold">Easy Ordering</p>
+              <p class="text-sm text-white/85">Cart + WhatsApp support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU CATALOG -->
+    <section id="menu" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight">Menu Catalog</h2>
+            <p class="mt-2 text-brown/80 dark:text-darktext/80 max-w-2xl">
+              Choose your favourite filling—add to cart in one tap. Prices shown in GBP (swap to GHS if preferred).
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 p-4 shadow-sm">
+            <p class="text-sm text-brown/80 dark:text-darktext/80">
+              Tip: Click the cart icon to review items and update quantities.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="menuGrid">
+          <!-- Product cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16 sm:py-20 bg-white/60 dark:bg-white/5 border-y border-black/5 dark:border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight">Our Story</h2>
+            <p class="mt-4 text-brown/85 dark:text-darktext/85 leading-relaxed">
+              Aba’s Pie is a family-owned bakery bringing traditional Ghanaian meat pies to the UK—crafted with care, baked fresh,
+              and packed with bold, comforting flavour. We keep it simple: quality ingredients, authentic seasoning, and a golden bake you can taste.
+            </p>
+
+            <ul class="mt-6 space-y-3">
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold text-black font-bold" aria-hidden="true">✓</span>
+                <span><strong class="font-semibold">Handmade dough</strong> for a flaky, tender bite.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold text-black font-bold" aria-hidden="true">✓</span>
+                <span><strong class="font-semibold">Ghana-inspired spice blend</strong> for rich, savoury depth.</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold text-black font-bold" aria-hidden="true">✓</span>
+                <span><strong class="font-semibold">Baked in small batches</strong> to keep every pie fresh.</span>
+              </li>
+            </ul>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#menu"
+                class="inline-flex items-center justify-center rounded-2xl bg-gold px-6 py-3 font-semibold text-black shadow-soft
+                hover:bg-orange hover:scale-[1.02] transition-all duration-300">
+                Explore the menu
+              </a>
+              <a href="#contact"
+                class="inline-flex items-center justify-center rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-6 py-3 font-semibold
+                hover:shadow-soft hover:scale-[1.02] transition-all duration-300">
+                Contact us
+              </a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-3xl bg-gradient-to-br from-gold/35 via-orange/25 to-coral/25 blur-2xl opacity-70"></div>
+            <div class="relative rounded-3xl overflow-hidden shadow-soft border border-black/5 dark:border-white/10">
+              <img
+                src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=1600&q=80"
+                alt="Fresh pastries arranged for serving"
+                class="h-[360px] w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO PROCESS -->
+    <section id="video" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight">How We Make It</h2>
+            <p class="mt-4 text-brown/85 dark:text-darktext/85 leading-relaxed">
+              Watch the process—from dough preparation to the final golden bake. Swap this placeholder with your own behind-the-scenes video anytime.
+            </p>
+
+            <ol class="mt-6 space-y-3">
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 font-semibold">1</span>
+                <span>Dough preparation and resting for flakiness</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 font-semibold">2</span>
+                <span>Seasoned filling cooked to rich Ghanaian flavour</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 font-semibold">3</span>
+                <span>Hand-folding, sealing, and finishing touches</span>
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1 inline-flex h-7 w-7 items-center justify-center rounded-xl bg-white dark:bg-white/5 border border-black/10 dark:border-white/10 font-semibold">4</span>
+                <span>Baking to a golden, glossy finish</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="rounded-3xl overflow-hidden shadow-soft border border-black/5 dark:border-white/10 bg-black">
+            <div class="aspect-video">
+              <iframe
+                class="w-full h-full"
+                src="/assets/video/Aba's Animation (1).mp4"
+                title="Authentic meat pie making video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 sm:py-20 bg-white/60 dark:bg-white/5 border-t border-black/5 dark:border-white/10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+          <div>
+            <h2 class="font-heading text-3xl sm:text-4xl font-extrabold tracking-tight">Contact Us</h2>
+            <p class="mt-2 text-brown/80 dark:text-darktext/80">
+              Questions, bulk orders, catering, or pickup details—send us a message.
+            </p>
+          </div>
+          <a href="https://wa.me/447555824637" target="_blank" rel="noopener"
+            class="inline-flex items-center justify-center rounded-2xl bg-coral px-6 py-3 font-semibold text-white shadow-soft
+            hover:opacity-95 hover:scale-[1.02] transition-all duration-300">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Form -->
+          <div class="rounded-3xl bg-white dark:bg-darkbg border border-black/5 dark:border-white/10 shadow-soft p-6 sm:p-8">
+            <form id="contactForm" class="space-y-5" novalidate>
+              <div>
+                <label for="name" class="block font-semibold">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required
+                  class="mt-2 w-full rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3
+                  focus:ring-2 focus:ring-gold/60 focus:border-transparent transition"
+                  placeholder="Your name" />
+                <p class="mt-2 text-sm text-coral hidden" id="errName">Please enter your name.</p>
+              </div>
+
+              <div>
+                <label for="email" class="block font-semibold">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required
+                  class="mt-2 w-full rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3
+                  focus:ring-2 focus:ring-gold/60 focus:border-transparent transition"
+                  placeholder="you@example.com" />
+                <p class="mt-2 text-sm text-coral hidden" id="errEmail">Please enter a valid email address.</p>
+              </div>
+
+              <div>
+                <label for="message" class="block font-semibold">Message</label>
+                <textarea id="message" name="message" rows="5" required
+                  class="mt-2 w-full rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-white/5 px-4 py-3
+                  focus:ring-2 focus:ring-gold/60 focus:border-transparent transition"
+                  placeholder="Tell us what you need (quantity, pickup date, delivery area, etc.)"></textarea>
+                <p class="mt-2 text-sm text-coral hidden" id="errMessage">Please write a short message.</p>
+              </div>
+
+              <button type="submit"
+                class="w-full inline-flex items-center justify-center rounded-2xl bg-gold px-6 py-3 font-semibold text-black shadow-soft
+                hover:bg-orange hover:scale-[1.01] transition-all duration-300">
+                Send Message
+              </button>
+
+              <p id="contactSuccess" class="hidden rounded-2xl bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 p-4 text-green-800 dark:text-green-200">
+                Thanks—message received. We’ll reply within 24–48 hours.
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact details -->
+          <div class="rounded-3xl bg-white dark:bg-darkbg border border-black/5 dark:border-white/10 shadow-soft p-6 sm:p-8">
+            <h3 class="font-heading text-2xl font-extrabold tracking-tight">Bakery Details</h3>
+            <div class="mt-5 space-y-4 text-brown/85 dark:text-darktext/85">
+              <p><strong>Address:</strong> Your Street, Norwich, NR1 1AA, United Kingdom</p>
+              <p><strong>Phone:</strong> <a class="underline hover:text-orange transition" href="tel:+447555824637">+447555824637</a></p>
+              <p><strong>Email:</strong> <a class="underline hover:text-orange transition" href="mailto:hello@abaspie.co.uk">hello@abaspie.co.uk</a></p>
+              <p><strong>Hours:</strong> Mon–Sat 10:00–18:00</p>
+            </div>
+
+            <div class="mt-8 rounded-2xl border border-black/10 dark:border-white/15 bg-cream/60 dark:bg-white/5 p-5">
+              <p class="font-semibold">Allergens notice (placeholder)</p>
+              <p class="mt-2 text-sm text-brown/80 dark:text-darktext/80">
+                Please ask about ingredients and allergens before ordering. We can provide details on request.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div>
+            <div class="flex items-center gap-3">
+              <img src="assets/img/Aba.webp" alt="Aba’s Pie logo" class="h-10 w-auto rounded-md" />
+              <div>
+                <p class="font-heading font-extrabold">Aba’s Pie</p>
+                <p class="text-sm text-brown/70 dark:text-darktext/70">Freshly Baked Goodness</p>
+              </div>
+            </div>
+            <p class="mt-4 text-brown/80 dark:text-darktext/80 max-w-sm">
+              Authentic Ghanaian meat pies baked fresh. Warm flavour, modern experience.
+            </p>
+          </div>
+
+          <div class="md:justify-self-center">
+            <p class="font-semibold">Quick Links</p>
+            <div class="mt-3 grid grid-cols-2 gap-2">
+              <a class="hover:text-orange transition" href="#home">Home</a>
+              <a class="hover:text-orange transition" href="#menu">Menu</a>
+              <a class="hover:text-orange transition" href="#about">About</a>
+              <a class="hover:text-orange transition" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div class="md:justify-self-end">
+            <p class="font-semibold">Follow</p>
+            <div class="mt-3 flex items-center gap-3">
+              <a class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+                 href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">
+                TikTok
+              </a>
+              <a class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+                 href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+                Instagram
+              </a>
+              <a class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+                 href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                Facebook
+              </a>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button id="openPrivacy"
+                class="underline hover:text-orange transition text-left"
+                type="button">
+                Privacy Policy
+              </button>
+              <button id="openCookieSettings"
+                class="underline hover:text-orange transition text-left"
+                type="button">
+                Cookie Settings
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t border-black/5 dark:border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p class="text-sm text-brown/70 dark:text-darktext/70">
+            © <span id="year"></span> Aba’s Pie. All rights reserved <br> Developed by Bisacom Graphics.
+          </p>
+          <p class="text-sm text-brown/70 dark:text-darktext/70">
+            Built for speed, accessibility, and a modern bakery experience.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/447555824637" target="_blank" rel="noopener"
+     id="whatsappBtn"
+     class="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center h-14 w-14 rounded-full bg-green-500 text-white shadow-soft
+     hover:scale-105 transition-all duration-300"
+     aria-label="Chat with Aba’s Pie on WhatsApp">
+    <span aria-hidden="true">🟢</span>
+  </a>
+
+  <!-- CART DRAWER -->
+  <div id="cartOverlay" class="fixed inset-0 bg-black/40 hidden z-[60]" aria-hidden="true"></div>
+  <aside id="cartDrawer"
+    class="fixed top-0 right-0 h-full w-full max-w-md translate-x-full z-[70]
+    bg-white dark:bg-darkbg border-l border-black/10 dark:border-white/10 shadow-soft transition-transform duration-300"
+    aria-label="Shopping cart"
+    role="dialog"
+    aria-modal="true">
+    <div class="h-full flex flex-col">
+      <div class="p-5 border-b border-black/10 dark:border-white/10 flex items-center justify-between">
+        <h3 class="font-heading text-2xl font-extrabold">Your Cart</h3>
+        <button id="cartClose" type="button"
+          class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+          aria-label="Close cart">
+          ✕
+        </button>
+      </div>
+
+      <div class="p-5 flex-1 overflow-auto" id="cartItems">
+        <!-- Items injected by JS -->
+      </div>
+
+      <div class="p-5 border-t border-black/10 dark:border-white/10">
+        <div class="flex items-center justify-between">
+          <p class="font-semibold">Total</p>
+          <p class="font-heading font-extrabold text-xl" id="cartTotal">£0.00</p>
+        </div>
+
+        <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <button id="stripeCheckoutBtn" type="button"
+            class="w-full inline-flex items-center justify-center rounded-2xl bg-black px-6 py-3 font-semibold text-white shadow-soft
+            hover:opacity-95 hover:scale-[1.01] transition-all duration-300"
+            aria-label="Pay with Stripe">
+            Pay with Stripe
+          </button>
+          <button id="paystackCheckoutBtn" type="button"
+            class="w-full inline-flex items-center justify-center rounded-2xl bg-coral px-6 py-3 font-semibold text-white shadow-soft
+            hover:opacity-95 hover:scale-[1.01] transition-all duration-300"
+            aria-label="Pay with Paystack">
+            Pay with Paystack
+          </button>
+        </div>
+
+        <p class="mt-3 text-xs text-brown/70 dark:text-darktext/70">
+          Payments run via Vercel serverless endpoints. See README for setup.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookieBanner"
+    class="fixed bottom-0 inset-x-0 z-[80] hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-4">
+      <div class="rounded-3xl bg-white dark:bg-darkbg border border-black/10 dark:border-white/15 shadow-soft p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <p class="font-semibold">We use cookies</p>
+          <p class="text-sm text-brown/80 dark:text-darktext/80">
+            We use cookies for a better experience and analytics. You can accept all or manage your preferences.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-2 sm:items-center">
+          <button id="cookieSettingsBtn" type="button"
+            class="rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-4 py-2 font-semibold
+            hover:shadow-soft hover:scale-[1.01] transition-all duration-300">
+            Settings
+          </button>
+          <button id="cookieRejectBtn" type="button"
+            class="rounded-2xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-4 py-2 font-semibold
+            hover:shadow-soft hover:scale-[1.01] transition-all duration-300">
+            Reject non-essential
+          </button>
+          <button id="cookieAcceptBtn" type="button"
+            class="rounded-2xl bg-gold px-4 py-2 font-semibold text-black shadow-soft
+            hover:bg-orange hover:scale-[1.01] transition-all duration-300">
+            Accept all
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COOKIE SETTINGS MODAL -->
+  <div id="cookieModal" class="fixed inset-0 z-[90] hidden" role="dialog" aria-modal="true" aria-label="Cookie preferences">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative mx-auto max-w-lg px-4 sm:px-6 lg:px-8 py-10">
+      <div class="rounded-3xl bg-white dark:bg-darkbg border border-black/10 dark:border-white/15 shadow-soft p-6">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-heading text-2xl font-extrabold">Cookie Preferences</h3>
+            <p class="mt-2 text-sm text-brown/80 dark:text-darktext/80">
+              Manage your cookie categories. Essential cookies are always enabled.
+            </p>
+          </div>
+          <button id="cookieModalClose" type="button"
+            class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+            aria-label="Close cookie settings">
+            ✕
+          </button>
+        </div>
+
+        <div class="mt-6 space-y-4">
+          <div class="rounded-2xl border border-black/10 dark:border-white/15 p-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="font-semibold">Essential</p>
+                <p class="text-sm text-brown/80 dark:text-darktext/80">Required for site functionality.</p>
+              </div>
+              <span class="text-sm font-semibold text-green-700 dark:text-green-300">Always on</span>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-black/10 dark:border-white/15 p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="font-semibold">Analytics</p>
+                <p class="text-sm text-brown/80 dark:text-darktext/80">Helps us improve the website.</p>
+              </div>
+              <label class="inline-flex items-center gap-2">
+                <input id="cookieAnalytics" type="checkbox" class="h-5 w-5 accent-gold" />
+                <span class="text-sm font-semibold">Allow</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-black/10 dark:border-white/15 p-4">
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <p class="font-semibold">Marketing</p>
+                <p class="text-sm text-brown/80 dark:text-darktext/80">Personalized offers and ads.</p>
+              </div>
+              <label class="inline-flex items-center gap-2">
+                <input id="cookieMarketing" type="checkbox" class="h-5 w-5 accent-gold" />
+                <span class="text-sm font-semibold">Allow</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-2 sm:justify-end pt-2">
+            <button id="cookieSave" type="button"
+              class="rounded-2xl bg-gold px-5 py-2 font-semibold text-black shadow-soft hover:bg-orange hover:scale-[1.01] transition-all duration-300">
+              Save preferences
+            </button>
+          </div>
+
+          <p class="text-xs text-brown/70 dark:text-darktext/70">
+            For details, see our <button id="openPrivacyFromCookie" class="underline hover:text-orange transition" type="button">Privacy Policy</button>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div id="privacyModal" class="fixed inset-0 z-[95] hidden" role="dialog" aria-modal="true" aria-label="Privacy policy">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-10">
+      <div class="rounded-3xl bg-white dark:bg-darkbg border border-black/10 dark:border-white/15 shadow-soft p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <h3 class="font-heading text-2xl sm:text-3xl font-extrabold">Privacy Policy (UK GDPR – Basic Template)</h3>
+            <p class="mt-2 text-sm text-brown/80 dark:text-darktext/80">
+              This is a starter template. Replace placeholders with your official business details and legal wording.
+            </p>
+          </div>
+          <button id="privacyClose" type="button"
+            class="rounded-xl border border-black/10 dark:border-white/15 bg-white dark:bg-darkbg px-3 py-2 hover:shadow-soft transition"
+            aria-label="Close privacy policy">
+            ✕
+          </button>
+        </div>
+
+        <div class="mt-6 space-y-4 text-sm leading-relaxed text-brown/85 dark:text-darktext/85 max-h-[60vh] overflow-auto pr-2">
+          <p><strong>1. Who we are</strong><br/>Aba’s Pie (“we”, “us”, “our”) is a bakery business based in the United Kingdom.</p>
+
+          <p><strong>2. What data we collect</strong><br/>
+            We may collect: name, email address, message content (via contact form), and cookie preferences. If you contact us via WhatsApp, your data is processed by WhatsApp under their policies.
+          </p>
+
+          <p><strong>3. Why we collect data</strong><br/>
+            To respond to enquiries, manage orders, improve the website (if analytics enabled), and keep the site secure.
+          </p>
+
+          <p><strong>4. Legal basis</strong><br/>
+            We process data based on legitimate interests (responding to enquiries), consent (optional cookies), and compliance with applicable laws.
+          </p>
+
+          <p><strong>5. Cookies</strong><br/>
+            Essential cookies keep the site working. Optional analytics/marketing cookies are only enabled with your consent. You can change preferences anytime via “Cookie Settings”.
+          </p>
+
+          <p><strong>6. Data retention</strong><br/>
+            We keep enquiry data only as long as necessary to respond and for record-keeping where required.
+          </p>
+
+          <p><strong>7. Your rights (UK GDPR)</strong><br/>
+            You may request access, correction, deletion, restriction, or portability of your data, and object to processing. You can withdraw consent at any time.
+          </p>
+
+          <p><strong>8. Contact</strong><br/>
+            Email: hello@abaspie.co.uk (replace)<br/>
+            Phone: +447555824637<br/>
+            Address: Your Street, Norwich, NR5 0PQ (replace)<br/>
+            Data Protection contact (if applicable): dpo@abaspie.co.uk (replace)
+          </p>
+
+          <p class="text-xs text-brown/70 dark:text-darktext/70">
+            Last updated: <span id="privacyUpdated"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+<script src="assets/js/payments.js" defer></script>
+<script src="assets/js/analytics.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</html>
